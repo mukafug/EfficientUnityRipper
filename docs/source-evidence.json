@@ -1,0 +1,1268 @@
+[
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 292,
+    "text": "class AssetScanner:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 328,
+    "text": "def scan(self, progress_callback=None) -> list[AssetEntry]:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 396,
+    "text": "def _resolve_mesh(self, entry: AssetEntry, overrides: dict):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 459,
+    "text": "def _resolve_material("
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 541,
+    "text": "def _resolve_parent_chain("
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 553,
+    "text": "current_parent = mat_entry.parent_name"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 556,
+    "text": "while current_parent and current_parent.lower() not in visited:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 565,
+    "text": "visited.add(current_parent.lower())"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 569,
+    "text": "mat_entry.material_name, current_parent,"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 573,
+    "text": "current_parent, folder=self.game_folder"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 578,
+    "text": "current_parent, mat_entry.material_name,"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 612,
+    "text": "material_name=current_parent,"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 634,
+    "text": "len(resolution.resolved), current_parent,"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 648,
+    "text": "current_parent = parent_props.parent_name"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 823,
+    "text": "def save_scan_cache(assets: list[AssetEntry], game_folder: str) -> Path:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/asset_scanner.py",
+    "line": 843,
+    "text": "def load_scan_cache(game_folder: str) -> tuple[list[AssetEntry], float] | None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 134,
+    "text": "class TypeCache:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 240,
+    "text": "def save(self, fingerprint: str, cache_dir: Optional[Path] = None) -> Path:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 258,
+    "text": "def load(cls, fingerprint: str, cache_dir: Optional[Path] = None) -> Optional[\"TypeCache\"]:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 143,
+    "text": "# of all packages under it. Built explicitly via rebuild_folder_index()."
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 153,
+    "text": "waiting for `rebuild_folder_index()` at scan completion."
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 208,
+    "text": "def rebuild_folder_index(self) -> None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/type_cache.py",
+    "line": 280,
+    "text": "cache.rebuild_folder_index()"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/props_parser.py",
+    "line": 109,
+    "text": "def parse_mesh_props(text: str, *, source: str = \"<string>\") -> MeshProps:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/props_parser.py",
+    "line": 636,
+    "text": "def parse_mesh_props_file(path: Path) -> MeshProps:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/props_parser.py",
+    "line": 309,
+    "text": "def parse_material_props(text: str, *, source: str = \"<string>\") -> MaterialProps:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/props_parser.py",
+    "line": 643,
+    "text": "def parse_material_props_file(path: Path) -> MaterialProps:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/props_parser.py",
+    "line": 42,
+    "text": "class MaterialProps:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/texture_resolver.py",
+    "line": 199,
+    "text": "def resolve_textures("
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/texture_resolver.py",
+    "line": 117,
+    "text": "def classify_texture("
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/texture_resolver.py",
+    "line": 369,
+    "text": "def _keyword_classify(stem_lower: str) -> Optional[tuple[str, str, int]]:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/everything.py",
+    "line": 102,
+    "text": "class EverythingSDK:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/everything.py",
+    "line": 358,
+    "text": "def _build_backend(dll_path: Optional[str]):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/file_search.py",
+    "line": 19,
+    "text": "class WalkSearcher:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/unpacker.py",
+    "line": 25,
+    "text": "class UnpackerProcess(QObject):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/unpacker.py",
+    "line": 134,
+    "text": "def export(self, asset_paths: list[str], output_dir: str,"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/unpacker.py",
+    "line": 166,
+    "text": "def get_props(self, vfs_path: str) -> None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/unpacker.py",
+    "line": 239,
+    "text": "def _on_stdout(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/queue_checkpoint.py",
+    "line": 81,
+    "text": "def save(*, profile: str, pending: list[AssetEntry], completed: list[str]) -> Path:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/queue_checkpoint.py",
+    "line": 110,
+    "text": "def load() -> Optional[CheckpointPayload]:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/job_manager.py",
+    "line": 73,
+    "text": "def cancel(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/job_manager.py",
+    "line": 90,
+    "text": "def run(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "core/job_manager.py",
+    "line": 215,
+    "text": "def _write_checkpoint(self) -> None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/main_window.py",
+    "line": 641,
+    "text": "def _apply_default_dock_layout(self) -> None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/main_window.py",
+    "line": 726,
+    "text": "def _restore_layout(self) -> bool:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/main_window.py",
+    "line": 186,
+    "text": "class MainWindow(QMainWindow):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/asset_browser.py",
+    "line": 43,
+    "text": "class AssetDetailDialog(QDialog):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/asset_browser.py",
+    "line": 246,
+    "text": "class AssetBrowser(QWidget):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/asset_browser.py",
+    "line": 407,
+    "text": "def _rebuild_tree(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 60,
+    "text": "class _LoadSignals(QObject):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 65,
+    "text": "class _LoadRunnable(QRunnable):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 232,
+    "text": "class _MeshGLView(QOpenGLWidget):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 690,
+    "text": "class MeshPreviewerPanel(QWidget):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 46,
+    "text": "def _wipe_temp_dir(path: Path) -> None:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 66,
+    "text": "def __init__(self, token: int, path: str, signals: _LoadSignals):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 72,
+    "text": "def run(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 146,
+    "text": "def _mat4_identity() -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 150,
+    "text": "def _perspective(fov_y_deg: float, aspect: float, near: float, far: float) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 161,
+    "text": "def _look_at(eye: np.ndarray, target: np.ndarray, up: np.ndarray) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 187,
+    "text": "def _quat_axis_angle(axis, angle: float) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 198,
+    "text": "def _quat_mul(p: np.ndarray, q: np.ndarray) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 209,
+    "text": "def _quat_normalize(q: np.ndarray) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 216,
+    "text": "def _quat_to_mat3(q: np.ndarray) -> np.ndarray:"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 240,
+    "text": "def __init__(self, parent=None):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/mesh_previewer.py",
+    "line": 284,
+    "text": "def _refresh_theme_colors(self):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/media_previewer.py",
+    "line": 33,
+    "text": "class _RmTreeRunnable(QRunnable):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "gui/media_previewer.py",
+    "line": 68,
+    "text": "class MediaPreviewerPanel(QWidget):"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 355,
+    "text": "switch (cmdName)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 1214,
+    "text": "private const int MaxDependencyDepth = 8;"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 1454,
+    "text": "private static bool ExportMesh(UObject mesh, string outputDir)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 1484,
+    "text": "private static bool ExportTexture(UTexture2D texture, string outputDir)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 1680,
+    "text": "private static void CollectAssetRefs(string propsJson, HashSet<string> refPaths)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 2160,
+    "text": "private static void HandleGetProps(JObject cmd)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 2081,
+    "text": "private static void HandleScanTypes(JObject cmd)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "cue4parse_cli/Program.cs",
+    "line": 1983,
+    "text": "private static void HandleInspect(JObject cmd)"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "LICENSE",
+    "line": 1,
+    "text": "MIT License"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "LICENSE",
+    "line": 3,
+    "text": "Copyright (c) 2026 Nathan Shturm"
+  },
+  {
+    "repository": "EfficientAssetRipper",
+    "file": "_version.py",
+    "line": 11,
+    "text": "__version__ = \"0.9.0\""
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/Directory.Build.props",
+    "line": 3,
+    "text": "<TargetFramework>net10.0</TargetFramework>"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/Directory.Build.props",
+    "line": 10,
+    "text": "<VersionPrefix>2.0.0</VersionPrefix>"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameStructure.cs",
+    "line": 52,
+    "text": "public static GameStructure Load(IEnumerable<string> paths, FileSystem fileSystem, CoreConfiguration configuration)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameStructure.cs",
+    "line": 40,
+    "text": "InitializeGameCollection(configuration.ImportSettings.DefaultVersion, configuration.ImportSettings.TargetVersion);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameStructure.cs",
+    "line": 64,
+    "text": "private void InitializeGameCollection(UnityVersion defaultVersion, UnityVersion targetVersion)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameStructure.cs",
+    "line": 36,
+    "text": "InitializeAssemblyManager(configuration);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameStructure.cs",
+    "line": 88,
+    "text": "private void InitializeAssemblyManager(CoreConfiguration configuration)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/AssetCreation/GameAssetFactory.cs",
+    "line": 69,
+    "text": "private static IMonoBehaviour ReadMonoBehaviour(IMonoBehaviour monoBehaviour, ReadOnlyArraySegment<byte> assetData, IAssemblyManager assemblyManager, SerializedType? type, IReadOnlyList<SerializedTypeReference> referenceTypes)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/AssetCreation/GameAssetFactory.cs",
+    "line": 100,
+    "text": "private static IUnityObjectBase ReadNormalObject(AssetInfo assetInfo, ReadOnlyArraySegment<byte> assetData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/AssetCreation/GameAssetFactory.cs",
+    "line": 190,
+    "text": "private static IUnityObjectBase? CreateAsset(AssetInfo assetInfo, UnityVersion version)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameInitializer.EngineResourceInjector.cs",
+    "line": 19,
+    "text": "private sealed class InjectedEngineCollection : VirtualAssetCollection"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/GameInitializer.EngineResourceInjector.cs",
+    "line": 49,
+    "text": "public static void InjectEngineFilesIfNecessary(GameBundle gameBundle, UnityVersion targetVersion)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 21,
+    "text": "public static GameBundle FromPaths(IEnumerable<string> paths, AssetFactoryBase assetFactory, FileSystem fileSystem, IGameInitializer? initializer = null)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 35,
+    "text": "List<FileBase> fileStack = LoadFilesAndDependencies(paths, fileSystem, initializer?.DependencyProvider);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 67,
+    "text": "private static List<FileBase> LoadFilesAndDependencies(IEnumerable<string> paths, FileSystem fileSystem, IDependencyProvider? dependencyProvider)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 116,
+    "text": "LoadDependencies(serializedFile, files, serializedFileNames, dependencyProvider);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 122,
+    "text": "LoadDependencies(serializedFileInContainer, files, serializedFileNames, dependencyProvider);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Bundles/GameBundle.FromPaths.cs",
+    "line": 130,
+    "text": "private static void LoadDependencies(SerializedFile serializedFile, List<FileBase> files, HashSet<string> serializedFileNames, IDependencyProvider? dependencyProvider)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/SerializedAssetCollection.cs",
+    "line": 20,
+    "text": "internal void InitializeDependencyList(IDependencyProvider? dependencyProvider)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/SerializedAssetCollection.cs",
+    "line": 70,
+    "text": "ReadData(collection, file, factory);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/SerializedAssetCollection.cs",
+    "line": 74,
+    "text": "private static void ReadData(SerializedAssetCollection collection, SerializedFile file, AssetFactoryBase factory)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/AssetCollection.cs",
+    "line": 24,
+    "text": "public string FilePath { get; set; } = string.Empty;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/AssetCollection.cs",
+    "line": 32,
+    "text": "public IReadOnlyList<AssetCollection?> Dependencies => dependencies;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/Collections/AssetCollection.cs",
+    "line": 269,
+    "text": "public IUnityObjectBase? TryGetAsset(PPtr pptr) => TryGetAsset(pptr.FileID, pptr.PathID);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/IUnityAssetBase.cs",
+    "line": 34,
+    "text": "void WalkRelease(AssetWalker walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/IUnityAssetBase.cs",
+    "line": 39,
+    "text": "void WalkStandard(AssetWalker walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Assets/IUnityAssetBase.cs",
+    "line": 40,
+    "text": "IEnumerable<(string, PPtr)> FetchDependencies();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.PrimaryContent/DefaultJsonWalker.cs",
+    "line": 11,
+    "text": "public class DefaultJsonWalker : AssetWalker"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.PrimaryContent/DefaultJsonWalker.cs",
+    "line": 253,
+    "text": "public override void VisitPPtr<TAsset>(PPtr<TAsset> pptr)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.PrimaryContent/DefaultJsonWalker.cs",
+    "line": 175,
+    "text": "public override void VisitPrimitive<T>(T value)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 187,
+    "text": "app.MapGet(AssetAPI.Urls.View, AssetAPI.GetView).ProducesHtmlPage();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 188,
+    "text": "app.MapGet(AssetAPI.Urls.Image, AssetAPI.GetImageData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 192,
+    "text": "app.MapGet(AssetAPI.Urls.Audio, AssetAPI.GetAudioData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 195,
+    "text": "app.MapGet(AssetAPI.Urls.Model, AssetAPI.GetModelData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 198,
+    "text": "app.MapGet(AssetAPI.Urls.Font, AssetAPI.GetFontData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 201,
+    "text": "app.MapGet(AssetAPI.Urls.Video, AssetAPI.GetVideoData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 204,
+    "text": "app.MapGet(AssetAPI.Urls.Json, AssetAPI.GetJson)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 207,
+    "text": "app.MapGet(AssetAPI.Urls.Yaml, AssetAPI.GetYaml)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 210,
+    "text": "app.MapGet(AssetAPI.Urls.Text, AssetAPI.GetText)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 213,
+    "text": "app.MapGet(AssetAPI.Urls.Binary, AssetAPI.GetBinaryData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 258,
+    "text": "app.MapPost(\"/Export/UnityProject\", Commands.HandleCommand<Commands.ExportUnityProject>)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 261,
+    "text": "app.MapPost(\"/Export/PrimaryContent\", Commands.HandleCommand<Commands.ExportPrimaryContent>)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 264,
+    "text": "app.MapPost(\"/LoadFile\", Commands.HandleCommand<Commands.LoadFile>)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/WebApplicationLauncher.cs",
+    "line": 267,
+    "text": "app.MapPost(\"/LoadFolder\", Commands.HandleCommand<Commands.LoadFolder>)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Arguments.cs",
+    "line": 12,
+    "text": "public int Port { get; set; }"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Arguments.cs",
+    "line": 28,
+    "text": "public bool Headless { get; set; }"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 52,
+    "text": "public static void LoadAndProcess(IReadOnlyList<string> paths)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 59,
+    "text": "public static async Task ExportUnityProject(string path)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 78,
+    "text": "public static async Task ExportPrimaryContent(string path)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 65,
+    "text": "if (!await UserConsentsToDeletion())"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 84,
+    "text": "if (!await UserConsentsToDeletion())"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/GameFileLoader.cs",
+    "line": 129,
+    "text": "private static async Task<bool> UserConsentsToDeletion()"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 360,
+    "text": "public static Task GetJson(HttpContext context)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 216,
+    "text": "public static Task GetModelData(HttpContext context)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 80,
+    "text": "public static Task GetImageData(HttpContext context)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 473,
+    "text": "private static string DecompileMonoScript(IMonoScript monoScript)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 478,
+    "text": "return EmptyScript.GetContent(monoScript);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 485,
+    "text": "return EmptyScript.GetContent(monoScript); // Todo: replace with ILSpy"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/AssetAPI.cs",
+    "line": 469,
+    "text": "DummyShaderTextExporter.ExportShader(shader, writer);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/DependenciesTab.cs",
+    "line": 11,
+    "text": "public override bool Enabled => Asset.FetchDependencies().Any(pair => !pair.Item2.IsNull);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/DependenciesTab.cs",
+    "line": 19,
+    "text": "foreach ((string path, PPtr pptr) in Asset.FetchDependencies())"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/DependenciesTab.cs",
+    "line": 19,
+    "text": "foreach ((string path, PPtr pptr) in Asset.FetchDependencies())"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/DependenciesTab.cs",
+    "line": 21,
+    "text": "if (pptr.IsNull)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Assets/DependenciesTab.cs",
+    "line": 31,
+    "text": "IUnityObjectBase? dependency = Asset.Collection.TryGetAsset(pptr);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Collections/ViewPage.cs",
+    "line": 87,
+    "text": "if (Collection.Dependencies.Count > 1)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Collections/ViewPage.cs",
+    "line": 102,
+    "text": "for (int i = 1; i < Collection.Dependencies.Count; i++)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.GUI.Web/Pages/Collections/ViewPage.cs",
+    "line": 104,
+    "text": "AssetCollection? dependency = Collection.Dependencies[i];"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 142,
+    "text": "public GameData LoadAndProcess(IReadOnlyList<string> paths, FileSystem fileSystem)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 60,
+    "text": "yield return new AttributePolyfillGenerator();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 61,
+    "text": "yield return new MonoExplicitPropertyRepairProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 62,
+    "text": "yield return new ObfuscationRepairProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 63,
+    "text": "yield return new ForwardingAssemblyGenerator();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 66,
+    "text": "yield return new MethodStubbingProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 68,
+    "text": "yield return new NullRefReturnProcessor(Settings.ImportSettings.ScriptContentLevel);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 69,
+    "text": "yield return new UnmanagedConstraintRecoveryProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 72,
+    "text": "yield return new NullableRemovalProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 76,
+    "text": "yield return new SafeAssemblyPublicizingProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 78,
+    "text": "yield return new RemoveAssemblyKeyFileAttributeProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 79,
+    "text": "yield return new InternalsVisibileToPublicKeyRemover();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 82,
+    "text": "yield return new SceneDefinitionProcessor();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ExportHandler.cs",
+    "line": 95,
+    "text": "public void Export(GameData gameData, string outputPath, FileSystem fileSystem)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 63,
+    "text": "OverrideExporter<IUnityObjectBase>(new DefaultYamlExporter(), true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 66,
+    "text": "OverrideExporter<IGlobalGameManager>(managerExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 67,
+    "text": "OverrideExporter<TypeTreeObject>(managerExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 69,
+    "text": "OverrideExporter<IMonoBehaviour>(new ScriptableObjectExporter(), true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 72,
+    "text": "OverrideExporter<IPrefabInstance>(sceneExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 73,
+    "text": "OverrideExporter<IGameObject>(sceneExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 74,
+    "text": "OverrideExporter<IComponent>(sceneExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 75,
+    "text": "OverrideExporter<ILevelGameManager>(sceneExporter, true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 85,
+    "text": "OverrideExporter<ISceneAsset>(new SceneAssetExporter(), true);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 89,
+    "text": "OverrideExporter<UnknownObject>(new UnknownObjectExporter(), false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 90,
+    "text": "OverrideExporter<UnreadableObject>(new UnreadableObjectExporter(), false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 100,
+    "text": "OverrideExporter<IMesh>(streamedAssetExporter);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 77,
+    "text": "OverrideDummyExporter<IBuildSettings>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 78,
+    "text": "OverrideDummyExporter<IPreloadData>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 79,
+    "text": "OverrideDummyExporter<IAssetBundle>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 80,
+    "text": "OverrideDummyExporter<IAssetBundleManifest>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 81,
+    "text": "OverrideDummyExporter<IMonoManager>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 82,
+    "text": "OverrideDummyExporter<IResourceManager>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 83,
+    "text": "OverrideDummyExporter<IShaderNameRegistry>(true, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 94,
+    "text": "OverrideDummyExporter<UnknownObject>(false, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.Overrides.cs",
+    "line": 95,
+    "text": "OverrideDummyExporter<UnreadableObject>(false, false);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.cs",
+    "line": 14,
+    "text": "public event Action<int, int>? EventExportProgressUpdated;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.cs",
+    "line": 100,
+    "text": "EventExportProgressUpdated?.Invoke(i, collections.Count);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/ProjectExporter.cs",
+    "line": 75,
+    "text": "public void Export(GameBundle fileCollection, CoreConfiguration options, FileSystem fileSystem)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/Shaders/DummyShaderTextExporter.cs",
+    "line": 14,
+    "text": "private static string FallbackDummyShader { get; } = \"\"\""
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/Shaders/DummyShaderTextExporter.cs",
+    "line": 66,
+    "text": "writer.Write(FallbackDummyShader);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/Shaders/DummyShaderTextExporter.cs",
+    "line": 94,
+    "text": "writer.Write(FallbackDummyShader);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/Shaders/DummyShaderTextExporter.cs",
+    "line": 58,
+    "text": "writer.Write(\"\\t//DummyShaderTextExporter\\n\");"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.UnityProjects/Shaders/DummyShaderTextExporter.cs",
+    "line": 92,
+    "text": "writer.Write(\"\\t//DummyShaderTextExporter\\n\");"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.Modules.Models/GlbMeshBuilder.cs",
+    "line": 13,
+    "text": "public static SceneBuilder Build(IMesh mesh)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Export.Modules.Models/GlbMeshBuilder.cs",
+    "line": 39,
+    "text": "sceneBuilder.AddRigidMesh(subMeshBuilder, subMeshNode);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.SourceGenerated.Extensions/MeshData.cs",
+    "line": 9,
+    "text": "public readonly record struct MeshData("
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.SourceGenerated.Extensions/MeshData.cs",
+    "line": 152,
+    "text": "public static bool TryMakeFromMesh(IMesh mesh, out MeshData meshData)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Processing/Scenes/SceneDefinitionProcessor.cs",
+    "line": 35,
+    "text": "if (asset is ILevelGameManager)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Processing/Scenes/SceneDefinitionProcessor.cs",
+    "line": 140,
+    "text": "IScene scene = editorBuildSettings.Scenes.AddNew();"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 66,
+    "text": "public SerializableStructure? LoadStructure()"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 89,
+    "text": "private UnityAssetBase LoadStructureOrStatelessAsset()"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 91,
+    "text": "return (UnityAssetBase?)LoadStructure() ?? StatelessAsset.Instance;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 96,
+    "text": "return LoadStructure()?.DeepClone(converter) ?? (IUnityAssetBase)StatelessAsset.Instance;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 100,
+    "text": "public override bool FlowMappedInYaml => LoadStructure()?.FlowMappedInYaml ?? base.FlowMappedInYaml;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 102,
+    "text": "public override int SerializedVersion => LoadStructure()?.SerializedVersion ?? base.SerializedVersion;"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 106,
+    "text": "LoadStructureOrStatelessAsset().WalkEditor(walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 111,
+    "text": "LoadStructureOrStatelessAsset().WalkRelease(walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 116,
+    "text": "LoadStructureOrStatelessAsset().WalkStandard(walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 121,
+    "text": "return LoadStructure()?.FetchDependencies() ?? [];"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 124,
+    "text": "public override void WriteEditor(AssetWriter writer) => LoadStructure()?.WriteEditor(writer);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 126,
+    "text": "public override void WriteRelease(AssetWriter writer) => LoadStructure()?.WriteRelease(writer);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 109,
+    "text": "public override void WalkRelease(AssetWalker walker)"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.Import/Structure/Assembly/Serializable/UnloadedStructure.cs",
+    "line": 111,
+    "text": "LoadStructureOrStatelessAsset().WalkRelease(walker);"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "Source/AssetRipper.SourceGenerated.Extensions/AssetRipper.SourceGenerated.Extensions.csproj",
+    "line": 16,
+    "text": "<PackageReference Include=\"AssetRipper.SourceGenerated\" Version=\"1.4.0\" />"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "LICENSE.md",
+    "line": 2,
+    "text": "Version 3, 29 June 2007"
+  },
+  {
+    "repository": "AssetRipper",
+    "file": "README.md",
+    "line": 40,
+    "text": "* AssetRipper is licensed under the [GNU General Public License v3.0](LICENSE.md)."
+  }
+]

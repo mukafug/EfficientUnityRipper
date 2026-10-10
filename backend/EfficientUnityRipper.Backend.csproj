@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssetRipperRoot Condition="'$(AssetRipperRoot)' == ''">$(MSBuildThisFileDirectory)..\.local\AssetRipper</AssetRipperRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AssetRipperRoot)\Source\AssetRipper.Import\AssetRipper.Import.csproj" />
+    <ProjectReference Include="$(AssetRipperRoot)\Source\AssetRipper.Export.PrimaryContent\AssetRipper.Export.PrimaryContent.csproj" />
+    <ProjectReference Include="$(AssetRipperRoot)\Source\AssetRipper.Export.Modules.Textures\AssetRipper.Export.Modules.Textures.csproj" />
+  </ItemGroup>
+</Project>

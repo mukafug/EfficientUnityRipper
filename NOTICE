@@ -1,0 +1,19 @@
+EfficientUnityRipper 0.1.0
+Copyright (c) 2026 EfficientUnityRipper contributors
+SPDX-License-Identifier: GPL-3.0-only
+
+Uses AssetRipper modules (Copyright ds5678 and contributors), GPL v3.
+Audited/pinned source: beeb50ee1c223e856c860caa338e5309404956a3
+https://github.com/AssetRipper/AssetRipper
+No upstream source has been modified by this project.
+
+Desktop interaction/layout is inspired by EfficientAssetRipper 0.9.0.
+Copyright (c) 2026 Nathan Shturm, MIT License.
+Audited source: 32f638ecfd1b3a9a7d7fb1c21c3b3ed288d66dc4
+https://github.com/exterminathan/EfficientAssetRipper
+Its full MIT notice is retained in docs/licenses/EfficientAssetRipper-MIT.txt.
+
+Dependency version/license metadata: docs/dependency-notices.json.
+License files referenced by restored NuGet packages: docs/licenses/.
+Python/Qt and optional conversion-tool obligations are discussed in
+docs/LICENSE_AUDIT.md. No proprietary game assets are included in source.

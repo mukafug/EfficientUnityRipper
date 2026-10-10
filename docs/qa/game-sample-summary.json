@@ -1,0 +1,95 @@
+{
+  "game": "Planet of Lana II",
+  "steam_app_id": 2997230,
+  "steam_build_id": 22899183,
+  "version": "6000.0.61f1",
+  "scope": "Bounded local authorized samples; no full-game extraction",
+  "scene_ui_sample": {
+    "total_records": 7305,
+    "input_records": 6982,
+    "input_status": {
+      "recovered": 4101,
+      "partial": 2881
+    },
+    "injected_records": 323,
+    "warnings": 4,
+    "exception_count": 0,
+    "unity_versions": [
+      "6000.0.61f1"
+    ],
+    "input_type_counts": {
+      "PreloadData": 1,
+      "Shader": 62,
+      "Sprite": 356,
+      "Material": 1,
+      "Texture2D": 1,
+      "GameObject": 1273,
+      "Transform": 17,
+      "CanvasRenderer": 914,
+      "Canvas": 25,
+      "RectTransform": 1256,
+      "CanvasGroup": 169,
+      "PlayableDirector": 1,
+      "SpriteAtlas": 1,
+      "MonoBehaviour": 2881,
+      "AnimationClip": 14,
+      "Cubemap": 1,
+      "ShaderVariantCollection": 1,
+      "Camera": 1,
+      "RenderSettings": 1,
+      "LightmapSettings": 1,
+      "NavMeshSettings": 1,
+      "SpriteRenderer": 4
+    }
+  },
+  "mesh_sample": {
+    "total_records": 355,
+    "input_records": 32,
+    "input_status": {
+      "recovered": 25,
+      "partial": 7
+    },
+    "injected_records": 323,
+    "warnings": 15,
+    "exception_count": 0,
+    "unity_versions": [
+      "6000.0.61f1"
+    ],
+    "input_type_counts": {
+      "PreloadData": 1,
+      "Mesh": 11,
+      "AnimationClip": 10,
+      "AnimatorController": 3,
+      "MonoBehaviour": 7
+    }
+  },
+  "fbx_meshes": [
+    {
+      "vertices": 216,
+      "triangles": 72,
+      "bytes": 20236,
+      "reader": "Assimp via assimp_py 1.2.0"
+    },
+    {
+      "vertices": 4518,
+      "triangles": 1506,
+      "bytes": 88668,
+      "reader": "Assimp via assimp_py 1.2.0"
+    }
+  ],
+  "texture_png": [
+    {
+      "width": 4096,
+      "height": 4096,
+      "bytes": 11349010,
+      "sampled_pixels_vary": true,
+      "reader": "Qt QImage"
+    }
+  ],
+  "source_files_unchanged": true,
+  "limitations": [
+    "No original-game visual or gameplay parity claim",
+    "Partial script/config fields due missing type layout/dependencies in isolated sample",
+    "FBX static geometry, no source shader/material/rig/animation parity"
+  ]
+}

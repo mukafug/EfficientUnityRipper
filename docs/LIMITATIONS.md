@@ -1,0 +1,14 @@
+# Limits and honest recovery boundaries
+
+- No automatic 1:1 recreation. Serialized evidence cannot establish full mechanics, authored intent, timing, gameplay behavior or visual parity.
+- MonoBehaviour fields require an available type layout. Stripped IL2CPP builds, missing assemblies/type trees, managed references, custom Unity builds and corrupted/encrypted containers can leave fields unavailable. JSON does not contain executable script logic.
+- Shader properties, variants and serialized buffers can be inspected. Compiled shader data are not recovered as equivalent executable shader source. Upstream dummy/template shaders are not original code.
+- AssetRipper injects predefined engine placeholders when built-in resources are missing. These are marked derived, and may lack geometry/pixels. They must not inflate recovered input counts or be treated as original assets.
+- Rig, bind poses, skin weights, animation curves, controllers, UI, lighting, physics, terrain and prefab data are exposed when decoded. Fixture coverage is stated separately from real-game coverage. No engine-specific reconstruction adapter has been built.
+- Mesh media export is static, uses upstream's default material, and can change coordinates/UV convention as the GLB builder does. Source material references, rig and animation remain in JSON. FBX is optional GLB conversion through an existing Blender installation, not a native FBX backend. No retargeting or shader-material relinking is promised.
+- PNG preview is decoded pixels, not GPU render fidelity. Audio extraction is available where upstream decoder supports it; there is no in-app playback. Terrain is serialized data, not a reconstructed rendered terrain preview.
+- Wireframe preview ignores scene nodes/transforms and displays at most 20,000 triangles; use external viewers for full geometry. Inspector display is capped at 250,000 characters, with full JSON on disk. Asset/property search and dependency navigation work; no graph canvas is implemented.
+- Stable IDs apply to identical serialized inputs and bundle/file names. Duplicate collection namespaces abort. Large folders need full hashing and importer memory; representative-file scans are safer for bounded tests. No full-game performance guarantee.
+- Resume works at object-index and batch-job boundaries. Importer parsing and individual media writes restart. Failed export attempts are kept, never erased. File-only cache reuse is disabled for sidecar correctness.
+- No signed installer, auto-update, watcher, network API, GPT connector, background daemon, REA integration or Blender-centered workflow. Background CLI produces persistent files; GPT still needs actual access to those files.
+- Source and scripts are ready for local build/run. Before redistributing generated binaries, assemble corresponding source and all applicable notices; private repository visibility does not remove licensing obligations.

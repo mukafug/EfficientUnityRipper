@@ -1,0 +1,20 @@
+[
+  {
+    "file": "75c5ce2316bc8c07bb65557dc7168ac215d01809b2d1b17276d9fc2616c16894.fbx",
+    "format": "fbx",
+    "reader": "Assimp via assimp_py 1.2.0",
+    "meshes": 1,
+    "vertices": 3,
+    "triangles": 1,
+    "bytes": 15772
+  },
+  {
+    "file": "75c5ce2316bc8c07bb65557dc7168ac215d01809b2d1b17276d9fc2616c16894.glb",
+    "format": "glb",
+    "reader": "Assimp via assimp_py 1.2.0",
+    "meshes": 1,
+    "vertices": 3,
+    "triangles": 1,
+    "bytes": 1132
+  }
+]

@@ -1,0 +1,496 @@
+[
+  {
+    "package": "AsmResolver.DotNet/6.0.1",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/Washi1337/AsmResolver",
+      "branch": "refs/heads/master",
+      "commit": "5aa0629348c523458780846b54a51f23ab8afced"
+    },
+    "project_url": null
+  },
+  {
+    "package": "AsmResolver.PE.File/6.0.1",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/Washi1337/AsmResolver",
+      "branch": "refs/heads/master",
+      "commit": "5aa0629348c523458780846b54a51f23ab8afced"
+    },
+    "project_url": null
+  },
+  {
+    "package": "AsmResolver.PE/6.0.1",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/Washi1337/AsmResolver",
+      "branch": "refs/heads/master",
+      "commit": "5aa0629348c523458780846b54a51f23ab8afced"
+    },
+    "project_url": null
+  },
+  {
+    "package": "AsmResolver/6.0.1",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/Washi1337/AsmResolver",
+      "branch": "refs/heads/master",
+      "commit": "5aa0629348c523458780846b54a51f23ab8afced"
+    },
+    "project_url": null
+  },
+  {
+    "package": "AssetRipper.CIL/1.3.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.CIL",
+      "commit": "eee7febc568b26ff48ef7475a0f810060b0875c6"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.CIL"
+  },
+  {
+    "package": "AssetRipper.Checksum/1.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Checksum",
+      "commit": "0718c9c7c085bc3867f2a723141b3a21e46bc327"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Checksum"
+  },
+  {
+    "package": "AssetRipper.Conversions.Crunch/1.0.3",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Conversions.Crunch",
+      "commit": "d7ba303106debfa2a5a0d62e4aa3210a3ed2862f"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Conversions.Crunch"
+  },
+  {
+    "package": "AssetRipper.Conversions.FastPng/1.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Conversions.FastPng",
+      "commit": "4e211b20f70f9a3b9346886db42e19aef5357ab5"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Conversions.FastPng"
+  },
+  {
+    "package": "AssetRipper.Conversions.UnityCrunch/1.0.3",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Conversions.Crunch",
+      "commit": "ee81b0cff87a06beda21ddb0a886416015a5a169"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Conversions.Crunch"
+  },
+  {
+    "package": "AssetRipper.Cpp2IL.Core/1.0.9",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/SamboyCoding/Cpp2IL.git",
+      "branch": "refs/heads/assetripper",
+      "commit": "291ce6cb95e9cbe661831c53d5ed8fff833d8318"
+    },
+    "project_url": "https://github.com/SamboyCoding/Cpp2IL"
+  },
+  {
+    "package": "AssetRipper.Gee.External.Capstone/2.3.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/ds5678/Capstone.NET",
+      "commit": "b90e380c14e857865c94a355954236e678bd557c"
+    },
+    "project_url": "https://github.com/ds5678/Capstone.NET"
+  },
+  {
+    "package": "AssetRipper.ICSharpCode.Decompiler/11.1.0.9736",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/icsharpcode/ILSpy.git",
+      "branch": "refs/heads/master",
+      "commit": "c9f90082e63c846d974349831881d90d79741c98"
+    },
+    "project_url": "https://github.com/icsharpcode/ILSpy/"
+  },
+  {
+    "package": "AssetRipper.IO.Endian/2.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.IO.Endian",
+      "commit": "09de5d51a8f02b8eb0d5c6a5e59d31473b9c062e"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.IO.Endian"
+  },
+  {
+    "package": "AssetRipper.LibCpp2IL/1.0.9",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/SamboyCoding/Cpp2IL.git",
+      "branch": "refs/heads/assetripper",
+      "commit": "291ce6cb95e9cbe661831c53d5ed8fff833d8318"
+    },
+    "project_url": null
+  },
+  {
+    "package": "AssetRipper.Mining.PredefinedAssets/1.5.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Mining",
+      "commit": "fcd32bbdba64dab64608e587b26bb950461695b5"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Mining"
+  },
+  {
+    "package": "AssetRipper.Primitives/3.2.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper.Primitives",
+      "commit": "d759b3db98bf2a1cb8c2181faf5d405610aac585"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper.Primitives"
+  },
+  {
+    "package": "AssetRipper.SharpGLTF.Core/1.0.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/vpenades/SharpGLTF",
+      "commit": "d7bbcc6e95bbf573debf4c4c1750aa08fcb1bb83"
+    },
+    "project_url": "https://github.com/vpenades/SharpGLTF"
+  },
+  {
+    "package": "AssetRipper.SharpGLTF.Runtime/1.0.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/vpenades/SharpGLTF",
+      "commit": "d7bbcc6e95bbf573debf4c4c1750aa08fcb1bb83"
+    },
+    "project_url": "https://github.com/vpenades/SharpGLTF"
+  },
+  {
+    "package": "AssetRipper.SharpGLTF.Toolkit/1.0.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/vpenades/SharpGLTF",
+      "commit": "d7bbcc6e95bbf573debf4c4c1750aa08fcb1bb83"
+    },
+    "project_url": "https://github.com/vpenades/SharpGLTF"
+  },
+  {
+    "package": "AssetRipper.SourceGenerated/1.4.0",
+    "license": "GPL-3.0-or-later",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/GPL-3.0-or-later",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/AssetRipper",
+      "commit": "a97189ea44940b498306dc73ee078653765a145b"
+    },
+    "project_url": "https://github.com/AssetRipper/AssetRipper"
+  },
+  {
+    "package": "AssetRipper.TextureDecoder/2.6.3",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/TextureDecoder",
+      "commit": "13b4f6ee4906877402ab69fc5a0b51b83c15db44"
+    },
+    "project_url": "https://github.com/AssetRipper/TextureDecoder"
+  },
+  {
+    "package": "AssetRipper.Tpk/2.0.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/AssetRipper/Tpk",
+      "commit": "be9d53f3179e04994349dcde3149018f35a96901"
+    },
+    "project_url": "https://github.com/AssetRipper/Tpk"
+  },
+  {
+    "package": "Basic.Reference.Assemblies.Net100/1.8.12",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/jaredpar/basic-reference-assemblies",
+      "commit": "584ed466ba1a6b08540cbab36f0c1e702575e092"
+    },
+    "project_url": null
+  },
+  {
+    "package": "Disarm/2022.1.0-master.99",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/SamboyCoding/Disarm.git",
+      "branch": "refs/heads/master",
+      "commit": "8574010015c8c56bb7faad7e407c50b0abe9cc72"
+    },
+    "project_url": "https://github.com/SamboyCoding/Disarm"
+  },
+  {
+    "package": "Fmod5Sharp/3.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/SamboyCoding/Fmod5Sharp.git",
+      "branch": "refs/heads/master",
+      "commit": "d9df2cbcc1aa478d7de9fcb64f83f7ba49f23258"
+    },
+    "project_url": "https://github.com/SamboyCoding/Fmod5Sharp"
+  },
+  {
+    "package": "Iced/1.21.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/icedland/iced",
+      "commit": "601c40570d6c986c8e1a6a2e483dd2fdf5ade552"
+    },
+    "project_url": "https://github.com/icedland/iced"
+  },
+  {
+    "package": "IndexRange/1.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/bgrainger/IndexRange.git",
+      "branch": "refs/heads/master",
+      "commit": "0ee6e541467a6d6519af8d8adfe1edad748fc8a2"
+    },
+    "project_url": "https://github.com/bgrainger/IndexRange"
+  },
+  {
+    "package": "IsExternalInit/1.0.3",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/manuelroemer/IsExternalInit"
+    },
+    "project_url": "https://github.com/manuelroemer/IsExternalInit"
+  },
+  {
+    "package": "K4os.Compression.LZ4/1.3.8",
+    "license": null,
+    "license_type": null,
+    "license_url": "https://github.com/MiloszKrajewski/K4os.Compression.LZ4/blob/master/LICENSE?raw=true",
+    "source_repository": {
+      "url": "https://github.com/MiloszKrajewski/K4os.Compression.LZ4"
+    },
+    "project_url": "https://github.com/MiloszKrajewski/K4os.Compression.LZ4"
+  },
+  {
+    "package": "Microsoft.Bcl.Memory/10.0.12",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "project_url": "https://dot.net/"
+  },
+  {
+    "package": "Microsoft.CodeAnalysis.Analyzers/3.3.4",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/roslyn-analyzers",
+      "commit": "22ea6422f85b05ca0793cc3b76375487be407f5d"
+    },
+    "project_url": "https://github.com/dotnet/roslyn-analyzers"
+  },
+  {
+    "package": "Microsoft.CodeAnalysis.Common/4.11.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/roslyn",
+      "commit": "5e3a11e2e7f952da93f9d35bd63a2fa181c0608b"
+    },
+    "project_url": "https://github.com/dotnet/roslyn"
+  },
+  {
+    "package": "NAudio.Core/3.1.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "project_url": "https://naudio.github.io/NAudio/"
+  },
+  {
+    "package": "NAudio.Vorbis/3.0.0",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/Vorbis",
+      "commit": "04488b37423fbdaea83a7ff1214967fcc65ceb2d"
+    },
+    "project_url": "https://github.com/naudio/Vorbis"
+  },
+  {
+    "package": "NVorbis/0.10.5",
+    "license": "LICENSE",
+    "license_type": "file",
+    "license_url": "https://aka.ms/deprecateLicenseUrl",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/NVorbis/NVorbis"
+    },
+    "project_url": "https://github.com/NVorbis/NVorbis"
+  },
+  {
+    "package": "OggVorbisEncoder/1.2.2",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/SteveLillis/.NET-Ogg-Vorbis-Encoder"
+    },
+    "project_url": "https://github.com/SteveLillis/.NET-Ogg-Vorbis-Encoder"
+  },
+  {
+    "package": "SharpCompress/0.50.4",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/adamhathcock/sharpcompress",
+      "commit": "c083c6efd843a844b0c8f7878787360e815be781"
+    },
+    "project_url": "https://github.com/adamhathcock/sharpcompress"
+  },
+  {
+    "package": "StbImageWriteSharp/1.16.7",
+    "license": null,
+    "license_type": null,
+    "license_url": null,
+    "source_repository": null,
+    "project_url": "https://github.com/StbSharp/StbImageWriteSharp"
+  },
+  {
+    "package": "System.IO.Hashing/9.0.7",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/runtime",
+      "commit": "3c298d9f00936d651cc47d221762474e25277672"
+    },
+    "project_url": "https://dot.net/"
+  },
+  {
+    "package": "System.Numerics.Tensors/10.0.0-rc.1.25451.107",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "2db1f5ee2bdda2e8d873769325fabede32e420e0"
+    },
+    "project_url": "https://dot.net/"
+  },
+  {
+    "package": "ZstdSharp.Port/0.8.8",
+    "license": "MIT",
+    "license_type": "expression",
+    "license_url": "https://licenses.nuget.org/MIT",
+    "source_repository": {
+      "type": "git",
+      "url": "https://github.com/oleg-st/ZstdSharp.git",
+      "branch": "refs/heads/master",
+      "commit": "2cd0c019693bc786a5fe5c3be94e107b24e7267e"
+    },
+    "project_url": "https://github.com/oleg-st/ZstdSharp"
+  }
+]
