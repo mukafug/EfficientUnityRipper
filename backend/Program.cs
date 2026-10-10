@@ -95,6 +95,7 @@ internal sealed class Engine : IDisposable, ILogger
         {
             case "scan": Scan(request); break;
             case "export": Export(request); break;
+            case "export-scene": ExportScene(request); break;
             case "ping": Send(new { kind = "ready", engine = "AssetRipper", version = "2.0.0", commit = Program.UpstreamCommit }); break;
             default: throw new ArgumentException("Unknown command");
         }
@@ -269,6 +270,29 @@ internal sealed class Engine : IDisposable, ILogger
         }
         Program.AtomicJson(Path.Combine(directory, "export-results.json"), results);
         Send(new { kind = "complete", operation = "export", results, failed = errors });
+    }
+    private void ExportScene(JsonNode request)
+    {
+        if (game == null) throw new InvalidOperationException("Scan input first to load engine");
+        string id = request["collection"]!.GetValue<string>();
+        AssetCollection collection = collections.First(p => p.Value == id).Key;
+        if (collection is not SerializedAssetCollection || !collection.Any(a => a is ILevelGameManager))
+            throw new ArgumentException("Select a serialized scene collection");
+        string directory = Path.GetFullPath(request["output"]!.GetValue<string>());
+        CheckOutput(inputPaths, directory);
+        Directory.CreateDirectory(directory);
+        Send(new { kind = "phase", message = "Building scene GLB with hierarchy, static meshes and material textures" });
+        // shortcut: upstream scene GLB supports static meshes and basic texture materials; custom shaders, skins and gameplay remain JSON evidence.
+        var scene = GlbLevelBuilder.Build(collection, true);
+        using MemoryStream stream = new();
+        if (!GlbWriter.TryWrite(scene, stream, out string? error)) throw new InvalidDataException(error);
+        if (stream.Length == 0) throw new InvalidDataException("Empty scene GLB");
+        string path = Path.Combine(directory, Program.Hash(id) + ".glb");
+        using (FileStream file = new(path, FileMode.CreateNew)) { stream.Position = 0; stream.CopyTo(file); }
+        var results = new[] { new { id, name = collection.Name, path, status = "derived", bytes = stream.Length,
+            limitations = new[] { "Static MeshFilter geometry and basic base-color/normal texture mapping only; custom shader behavior, skinned renderers, particles and gameplay are not reconstructed." } } };
+        Program.AtomicJson(Path.Combine(directory, "export-results.json"), results);
+        Send(new { kind = "complete", operation = "export-scene", results, failed = 0 });
     }
     public void Dispose() { game?.Dispose(); Logger.Remove(this); Logger.OnStatusChanged -= Status; }
     private static void CheckOutput(string[] paths, string output)

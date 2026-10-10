@@ -11,11 +11,18 @@ import threading
 import time
 import uuid
 import queue
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = Path(os.environ.get("LOCALAPPDATA", str(ROOT / ".local"))) / "EfficientUnityRipper"
 UPSTREAM = "beeb50ee1c223e856c860caa338e5309404956a3"
 BACKEND_REVISION = 2
+
+
+def export_name(name, id):
+    """Readable Windows filename; stable suffix distinguishes duplicate asset names."""
+    stem = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', str(name or 'Asset'))[:80].strip(' .') or 'Asset'
+    return stem + '__' + hashlib.sha256(id.encode('utf-8')).hexdigest()[:12]
 
 
 def atomic_json(path: Path, data):
@@ -166,7 +173,7 @@ class Backend:
         self.loaded = (tuple(paths), token)
         return index
 
-    def media(self, index, ids, destination):
+    def media(self, index, ids, destination, collection=None):
         paths = index.manifest["sources"]
         outside_inputs(paths, destination)
         token, sources = fingerprint(paths, self.event)
@@ -174,7 +181,22 @@ class Backend:
             raise ValueError("Source changed since scan; rescan before media export")
         if self.loaded != (tuple(paths), token):
             self.scan(paths, index.directory, force=True, token=token, sources=sources)
-        return self.request({"command": "export", "ids": ids, "output": str(destination), "format": "media"})
+        if collection is not None:
+            result = self.request({"command": "export-scene", "collection": collection, "output": str(destination)})
+        else:
+            result = self.request({"command": "export", "ids": ids, "output": str(destination), "format": "media"})
+        try:
+            for item in result["results"]:
+                if item.get("path"):
+                    source = Path(item["path"])
+                    target = source.with_name(export_name(item.get("name"), item["id"]) + source.suffix)
+                    if target.exists():
+                        raise FileExistsError(target)
+                    source.rename(target)
+                    item["path"] = str(target)
+        finally:
+            atomic_json(Path(destination) / "export-results.json", result["results"])
+        return result
 
 
 class Index:
@@ -270,7 +292,8 @@ class Index:
         ids = sorted(set(ids))
         rows = []
         for id in ids:
-            row = self.rows[id]
+            row = dict(self.rows[id])
+            row["object_file"] = 'objects/' + export_name(row.get("name"), id) + '.json'
             shutil.copyfile(self.object_path(id), destination / row["object_file"])
             raw_file = self.object(id).get("raw_file")
             if raw_file:

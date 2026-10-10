@@ -22,4 +22,6 @@ Object IDs and top-level `path_id` are strings. Serialized property PPtr numbers
 
 `agent-context.md` explains where to start. Export packages contain a selected object set and its original stable IDs, plus selected dependency closure if requested. Edges outside the set are listed as missing dependencies. A collection/scene package is JSON evidence, not a `.unity` project or a playable game. `media/export-results.json` records each success or failure and a derived-media path.
 
+Export package JSON/media filenames are sanitized decoded names with a stable hash suffix; `object_file` and `export-results.json` are authoritative path mappings. The index itself keeps hash filenames. CLI `--scene-glb` adds one derived textured static scene GLB while keeping the serialized evidence. FBX conversion embeds texture images but does not translate custom Unity shader code.
+
 Wait for a scan completion before consuming its index; atomic files do not make the entire directory a concurrent transactional database. Concurrent writers into one output are unsupported. Missing original inputs do not prevent JSON-only browse/export but do prevent re-decoding media.

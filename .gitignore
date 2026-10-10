@@ -9,6 +9,9 @@ extracted/
 exports/
 *.fbx
 *.glb
+*.blend
+*.blend1
+*.mp4
 *.bundle
 *.assets
 *.resS

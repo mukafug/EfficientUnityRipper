@@ -20,8 +20,11 @@ def main():
     export.add_argument("--collection")
     export.add_argument("--dependencies", action="store_true")
     export.add_argument("--media", action="store_true")
+    export.add_argument("--scene-glb", action="store_true", help="Export --collection static scene hierarchy with basic textured materials")
     export.add_argument("--fbx", metavar="BLENDER_EXE", help="Optional actual GLB-to-FBX conversion")
     args = parser.parse_args()
+    if args.command == "export" and args.scene_glb and not args.collection:
+        parser.error("--scene-glb requires --collection")
     backend = Backend(lambda event: print(json.dumps(event), flush=True))
     try:
         if args.command == "scan":
@@ -32,9 +35,9 @@ def main():
             if args.dependencies:
                 ids = index.closure(ids)
             destination = index.export_json(ids, args.output)
-            if args.media or args.fbx:
+            if args.media or args.fbx or args.scene_glb:
                 media_ids = [id for id in ids if index.rows[id]["class_id"] in (28, 43, 83)]
-                result = backend.media(index, media_ids, destination / "media")
+                result = backend.media(index, media_ids, destination / "media", collection=args.collection if args.scene_glb else None)
                 if args.fbx:
                     from .fbx import convert
                     for item in result["results"]:

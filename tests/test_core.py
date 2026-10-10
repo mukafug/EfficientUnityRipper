@@ -5,10 +5,17 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
-from eur.core import ROOT, Backend, Index, Queue, atomic_json, fingerprint
+from eur.core import ROOT, Backend, Index, Queue, atomic_json, fingerprint, export_name
 
 
 class CoreTests(unittest.TestCase):
+    def test_export_names_are_readable_safe_and_disambiguated(self):
+        name = export_name('CON/<Wall>:*? .', 'first')
+        self.assertTrue(name.startswith('CON__Wall____'))
+        self.assertFalse(any(c in name for c in '<>:"/\\|?*'))
+        self.assertNotEqual(export_name('Wall', 'first'), export_name('Wall', 'second'))
+        self.assertLessEqual(len(export_name('x' * 500, 'first')), 94)
+        self.assertTrue(export_name('...', 'first').startswith('Asset__'))
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.directory = Path(self.temp.name)
@@ -80,6 +87,19 @@ class EngineTests(unittest.TestCase):
         image = QImage(result["results"][0]["path"])
         self.assertFalse(image.isNull()); self.assertEqual((image.width(), image.height()), (2, 2))
         self.assertEqual(image.pixelColor(0, 0).alpha(), 255)
+        self.assertTrue(Path(result['results'][0]['path']).name.startswith('Authored Checker__'))
+
+    def test_named_media_export_preserves_existing_file_and_failure_mapping(self):
+        id = next(id for id, row in self.index.rows.items() if row['name'] == 'Authored Checker')
+        destination = self.directory / 'name-collision'
+        result = self.backend.media(self.index, [id], destination)
+        existing = Path(result['results'][0]['path'])
+        existing.write_bytes(b'user-file')
+        with self.assertRaises(FileExistsError):
+            self.backend.media(self.index, [id], destination)
+        self.assertEqual(existing.read_bytes(), b'user-file')
+        checkpoint = json.loads((destination / 'export-results.json').read_text())
+        self.assertTrue(Path(checkpoint[0]['path']).is_file())
 
     def test_cache_integrity_rebuilds_corrupt_objects(self):
         cached = self.backend.scan([self.source], self.index.directory)
@@ -99,6 +119,9 @@ class EngineTests(unittest.TestCase):
         exported = Index(destination / "manifest.json")
         self.assertEqual(len(exported.rows), 8)
         self.assertEqual(exported.object(id)["id"], id)
+        self.assertTrue(Path(exported.rows[id]['object_file']).name.startswith('Test Child__'))
+        self.assertTrue(exported.valid_object(id))
+        self.assertNotEqual(exported.rows[id]['object_file'], self.index.rows[id]['object_file'])
         with self.assertRaises(FileExistsError): self.index.export_json(ids, destination)
 
     def test_invalid_input_error_does_not_kill_protocol(self):

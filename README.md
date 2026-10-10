@@ -1,6 +1,8 @@
 # EfficientUnityRipper
 
-Windows desktop browser and headless Unity reconstruction index for coding agents. It actually loads Unity serialized files and bundles through AssetRipper, exports the decoded serialized properties and reference graph, and preserves uncertainty. REA is a separate application and is not integrated.
+A Unity asset ripper for Blender, Unity, and AI-assisted scene reconstruction.
+
+Windows desktop browser and headless reconstruction index powered by AssetRipper. It loads Unity serialized files and bundles, exports decoded properties and reference graphs, and preserves uncertainty. REA remains a separate application.
 
 ## Run on Windows
 
@@ -12,7 +14,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 .\launch.cmd
 ```
 
-The delivered local checkout already has a built backend and environment in `.local`; double-click `launch.cmd`. `.local` is ignored by Git. A fresh source checkout needs setup. This is a runnable source MVP, not an installer or signed executable distribution.
+After setup completes, double-click `launch.cmd`. The backend and environment in `.local` are ignored by Git. This is a runnable source MVP, not an installer or signed executable distribution. This public repository contains source and authored test fixtures; extracted game assets, local caches and Blender showcases are excluded.
 
 1. Select a Unity data folder, serialized file, or asset bundle; click **Scan / index**. Use only inputs you are authorized to read.
 2. Search/filter the browser. Select objects to inspect properties, dependencies, and provenance. Enter a field/value in the inspector search and press Enter. Double-click a dependency to navigate.
@@ -30,6 +32,16 @@ Default index, preview, queue, and log data live in `%LOCALAPPDATA%\EfficientUni
 ```
 
 For a collection/scene use `--collection <collection-id>` instead of `--id`. A decoded PNG/GLB/audio failure returns exit code 2 while preserving JSON and successful files. Other errors return 1. JSON-only export needs no running engine. Media export reloads original Unity inputs if necessary, and refuses changed input fingerprints.
+
+Exported JSON and media filenames use the decoded asset name plus a stable 12-character suffix, with Windows-invalid characters sanitized. Internal index object files retain stable hash names; manifest IDs and references do not change.
+
+For a textured static scene suitable for Blender, use:
+
+```powershell
+.\.local\venv\Scripts\python.exe -m eur.cli export "D:\UnityIndex\game\manifest.json" --collection "<scene-collection-id>" --scene-glb --output "D:\UnityExports\scene-package"
+```
+
+This uses AssetRipper's existing scene builder to preserve static mesh hierarchy/transforms and embed basic base-color/normal textures. Add `--fbx "C:\Program Files\Blender Foundation\Blender 5.1\blender.exe"` for binary FBX with embedded textures. Custom shader behavior, skinned renderers, sprites, particles, lighting and gameplay are not reconstructed by this scene export. A scene GLB is an approximation, not a playable recovered Unity project. The option currently belongs to the CLI; the GUI's collection export retains separate asset media.
 
 ```powershell
 .\background-index.ps1 -InputPath "D:\AuthorizedGame\Game_Data" -OutputDirectory "D:\UnityIndex\game"
@@ -52,6 +64,8 @@ Core indexing, manifests, GUI, PNG, and GLB do not require Blender. An optional 
 ```
 
 This is static mesh conversion. Source rig/animation data stay in the JSON; the media exporter does not reconstruct them into FBX. AssetRipper's single-mesh GLB builder uses a default material: shader appearance and texture assignments are not recovered into that mesh export. Texture media can be exported separately, with material references preserved in JSON. FBX files are not renamed GLB files.
+
+A separate authorized local animation experiment transferred 228 character clips into Blender and checked actual skeletal deformation: 227 showed motion, and one was a reference pose. That experiment and its game-derived showcase remain local; animated GLB/FBX export is not integrated into the shipped CLI or GUI. See [validation](docs/VALIDATION.md) for its scope and omitted animation channels.
 
 ## Tests
 
